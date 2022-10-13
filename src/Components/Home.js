@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Home = () => {
+const Home = (props) => {
+    console.log("Home", props);
     return (
         <div>
             <div className='add-to-cart'>
@@ -16,7 +17,7 @@ const Home = () => {
                     <span>price : $999</span>
                 </div>
                 <div className='btn-wrapper item'>
-                    <button>Add To cart</button>
+                    <button onClick={() => props.addToCartHandler({ price: 999, name: "I - Phone" })}>Add To cart</button>
                 </div>
             </div>
         </div>
